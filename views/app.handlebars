@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Chirper</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="shortcut icon" href="/assets/img/favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+</head>
+<body>
+  <nav><a href="/login"><img id="logo" src="/assets/img/face.png" alt="face logo"/></a>
+    <div class="navlink"><a href="/logout">Log out</a></div>
+  </nav>
+  <section id="makeChirp">
+    <form id="chirpForm" name="chirpForm" action="/maker" method="POST" class="chirpForm">
+      <label for="chirp">Make a chirp: </label>
+      <input id="chirp" type="text" name="chirp" placeholder="Chirp"/>
+      <input class="chirpSend" type="submit" value="Chirp" />
+    </form>
+  </section>
+  <section id="chirps">
+    <div class="chirp">
+      {{#if chirps}}
+        {{#each chirps}}
+          <div class="chirp"><img src="assets/img/domoface.jpeg" alt="domo face" class="chirpFace"/>
+            <h3 class="chirpText">{{this.chirp}}</h3>
+            <h3 class="dateText">Chirped at {{this.createdData}}</h3>
+          </div>
+        {{/each}}
+        {{else}}
+          <h3 class="emptyChirp">You haven't posted chirps yet!</h3>
+      {{/if}}
+    </div>
+  </section>
+  <div id="chirperMsg"><img id="speech" src="/assets/img/speech.png" alt="speech box"/>
+    <h3><span id="errorMessage"></span></h3><img id="chirpface" src="assets/img/domo.png" alt="chirp"/>
+  </div>
+  <script src="/assets/bundle.js"></script>
+</body>
+</html>
