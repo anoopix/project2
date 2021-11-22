@@ -40,7 +40,7 @@ const ChirpList = function(props){
             <div key={chirp._id} className="chirp">
                 <img src="assets/img/default_avatar.png" alt="default avatar" className="chirpFace"/>
                 <h3 className="chirpText">{chirp.chirp}</h3>
-                <h3 className="dateText">Chirped at {chirp.createdData}</h3>
+                <h3 className="dateText">Chirped at 5:00 pm on Nov 21, 2021 {chirp.createdData}</h3>
                 <button id="likeBtn">Like</button>
                 <button id="rechirpBtn">Rechirp</button>
                 <button id="replyBtn">Reply</button>
