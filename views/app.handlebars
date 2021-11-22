@@ -14,6 +14,7 @@
     <form id="chirpForm" name="chirpForm" action="/maker" method="POST" class="chirpForm">
       <label for="chirp">Make a chirp: </label>
       <input id="chirp" type="text" name="chirp" placeholder="Chirp"/>
+      <input type="hidden" name="_csrf" value={{csrfToken}} />
       <input class="chirpSend" type="submit" value="Chirp" />
     </form>
   </section>
