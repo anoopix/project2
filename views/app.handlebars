@@ -2,7 +2,11 @@
 <head>
   <meta charset="utf-8"/>
   <title>Chirper</title>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.6.2/remarkable.min.js"></script>
   <link rel="shortcut icon" href="/assets/img/favicon.png"/>
   <link rel="stylesheet" type="text/css" href="/assets/style.css"/>
 </head>
@@ -11,16 +15,16 @@
     <div class="navlink"><a href="/logout">Log out</a></div>
   </nav>
   <section id="makeChirp">
-    <form id="chirpForm" name="chirpForm" action="/maker" method="POST" class="chirpForm">
+    {{!-- <form id="chirpForm" name="chirpForm" action="/maker" method="POST" class="chirpForm">
       <label for="chirp">Make a chirp: </label>
       <input id="chirp" type="text" name="chirp" placeholder="Chirp"/>
       <input type="hidden" name="_csrf" value={{csrfToken}} />
       <input class="chirpSend" type="submit" value="Chirp" />
-    </form>
+    </form> --}}
   </section>
   <section id="chirps">
     <div class="chirp">
-      {{#if chirps}}
+      {{!-- {{#if chirps}}
         {{#each chirps}}
           <div class="chirp"><img src="assets/img/domoface.jpeg" alt="domo face" class="chirpFace"/>
             <h3 class="chirpText">{{this.chirp}}</h3>
@@ -29,7 +33,7 @@
         {{/each}}
         {{else}}
           <h3 class="emptyChirp">You haven't posted chirps yet!</h3>
-      {{/if}}
+      {{/if}} --}}
     </div>
   </section>
   <div id="chirperMsg"><img id="speech" src="/assets/img/speech.png" alt="speech box"/>
