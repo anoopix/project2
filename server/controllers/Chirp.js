@@ -37,5 +37,20 @@ const makeChirp = (req, res) => {
     return chirpPromise;
 };
 
+const getChirps = (request, response) => {
+    const req = request;
+    const res = response;
+
+    return Chirp.ChirpModel.findByOwner(req.session.account._id, (err, docs) => {
+        if (err) {
+            console.log(err);
+            return res.status(400).json({})
+        }
+
+        return res.json({ chirps: docs });
+    });
+};
+
 module.exports.makerPage = makerPage;
+module.exports.getChirps = getChirps;
 module.exports.make = makeChirp;

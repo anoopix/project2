@@ -17,8 +17,8 @@ body {
 
 nav {
     width: 100%;
-    height: 50px;
-    background-color: #55acee;
+    height: 120px;
+    background-color: #ffb45e;
 }
 
 nav:nth-child(1) {
@@ -31,7 +31,8 @@ nav:nth-child(1) {
     padding-left: 20px;
     color: white;
     font-size: 1.3em;
-    float: left;
+    float: right;
+    display: block;
 }
 
 .navlink a,
@@ -43,24 +44,26 @@ nav:nth-child(1) {
     text-decoration: none;
     padding: 5px;
     border-radius: 4px;
-    background-color: #55acee;
+    background-color: #ffb45e;
+    border: 2px solid #ff833c;
     transition: background-color 0.4s ease;
 }
 
 .navlink a:hover {
     transition: background-color 0.8s ease;
-    background-color: #66bdff;
+    background-color: #ff833c;
 }
 
 .chirpForm {
-    border: 2px solid #338acc;
+    border: 2px solid #ff833c;
     height: 35px;
     width: 700px;
     margin-top: 0px;
     padding-top: 10px;
-    background-color: #55acee;
+    background-color: #ffb45e;
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px;
+    margin: 0 auto;
 }
 
 .chirpForm label {
@@ -74,13 +77,14 @@ nav:nth-child(1) {
 
 .chirpForm input[type=text] {
     float: left;
+    width: 400px;
 }
 
 .chirpSend {
     transition: background-color 0.4s ease;
     display: inline;
     width: 90px;
-    background-color: #55acee;
+    background-color: #ffb45e;
     border-radius: 2px;
     color: white;
     text-decoration: none;
@@ -95,7 +99,7 @@ nav:nth-child(1) {
 
 .chirpSend:hover {
     transition: background-color 0.4s ease;
-    background-color: #338acc;
+    background-color: #ff833c;
 }
 
 .mainForm {
@@ -126,9 +130,9 @@ nav:nth-child(1) {
     margin-top: 14px;
     font-size: 1.2em;
     width: 100px;
-    background-color: #55acee;
+    background-color: #ff833c;
     border-radius: 2px;
-    border-color: #66acee;
+    border-color: #f79760;
     padding: 3px 0px;
     color: white;
     text-decoration: none;
@@ -143,7 +147,7 @@ nav:nth-child(1) {
 
 .formSubmit:hover {
     transition: background-color 0.4s ease;
-    background-color: #338acc;
+    background-color: #ff833c;
 }
 
 #user,
@@ -159,7 +163,7 @@ nav:nth-child(1) {
 #pass:focus,
 #pass2:focus {
     outline: none;
-    box-shadow: 0px 0px 1px 1px #55acee;
+    box-shadow: 0px 0px 1px 1px #ff833c;
 }
 
 #chirperMsg {
@@ -207,7 +211,6 @@ nav:nth-child(1) {
 #chirps {
     width: 40%;
     min-width: 400px;
-    border: 2px solid #55acee;
     border-radius: 4px;
     margin: 0 auto;
     margin-top: 100px;
@@ -218,19 +221,17 @@ nav:nth-child(1) {
     margin: 0 auto;
     margin-top: 2px;
     margin-bottom: 2px;
-    border: 2px solid #55acee;
+    border: 7px solid #ff833c;
     border-radius: 4px;
-    background-color: #55acee;
+    background-color: #ffffff;
     padding: 10px;
     min-height: 60px;
     overflow: hidden;
 }
 
 .chirp:hover {
-    transition: border-color 0.2s ease-out;
-    border-color: rgba(255, 255, 255, 0.8);
-    transition: background-color 2.6s ease-out;
-    background-color: #66bfff;
+    transition: background-color 0.2s ease-out;
+    background-color: #ffead2;
 }
 
 img.chirpFace {
@@ -273,4 +274,17 @@ h3.dateText {
 
 .chirp:last-child {
     margin-bottom: 10px;
+}
+
+#chirperLogo {
+    font-size: 48px;
+    float: left;
+}
+
+#chirperLogo a:link,
+#chirperLogo a:visited,
+#chirperLogo a:hover,
+#chirperLogo a:active {
+    color: white;
+    text-decoration: none;
 }
